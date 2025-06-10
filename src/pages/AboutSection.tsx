@@ -42,7 +42,14 @@ const AboutSection = () => {
   const cardBg = useColorModeValue("gray.100", "gray.700");
 
   return (
-    <Box id="about" py={16} px={4}>
+    <Box
+      as="section"
+      id="about"
+      py={16}
+      px={4}
+      pt="100px"
+      scrollMarginTop="100px"
+    >
       <Container maxW="6xl">
         <Heading textAlign="center" mb={6}>
           About Us

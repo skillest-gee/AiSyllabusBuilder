@@ -10,7 +10,12 @@ const config: ThemeConfig = {
 };
 
 // Extend Chakra's theme with color mode support
-export const theme = extendTheme({ config });
+export const theme = extendTheme({
+  config,
+  styles: {
+    global: { html: { scrollBehavior: "smooth", scrollPaddingTop: "100px" } },
+  },
+});
 
 // Export the script for SSR compatibility (optional in Vite)
 export const ColorModeSetup = () => (

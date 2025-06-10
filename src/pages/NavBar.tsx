@@ -19,7 +19,18 @@ const NavBar = () => {
   const bgColor = useColorModeValue("gray.100", "gray.800");
 
   return (
-    <Box bg={bgColor} px={3} py={2} boxShadow="sm" w="100%">
+    <Box
+      as="header"
+      position="fixed"
+      top={0}
+      left={0}
+      width="100%"
+      zIndex="1000"
+      bg={bgColor}
+      px={3}
+      py={2}
+      boxShadow="sm"
+    >
       <Flex
         align="center"
         justify="space-between"
@@ -45,16 +56,16 @@ const NavBar = () => {
           display={{ base: "none", md: "flex" }}
           fontSize="lg"
         >
-          <Link as={RouterLink} to="/" color={navLinkColor}>
+          <Link href="#home" color={navLinkColor}>
             Home
           </Link>
-          <Link as={RouterLink} to="/about" color={navLinkColor}>
+          <Link href="#about" color={navLinkColor}>
             About
           </Link>
-          <Link as={RouterLink} to="/services" color={navLinkColor}>
+          <Link href="#services" color={navLinkColor}>
             Services
           </Link>
-          <Link as={RouterLink} to="/contact" color={navLinkColor}>
+          <Link href="#contact" color={navLinkColor}>
             Contact
           </Link>
         </HStack>

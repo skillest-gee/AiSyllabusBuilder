@@ -1,18 +1,19 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./NavBar";
 import HomeSection from "./HomeSection";
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
-import ContactSection from "./ContactSection";
+import ContactUsSection from "./ContactUsSection";
+import Footer from "./Footer";
 
 const Landing = () => {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav" "main"`,
+        base: `"nav" "main" "footer"`,
+        lg: `"nav" "main" "footer"`,
       }}
-      templateRows="auto 1fr"
+      templateRows="auto 1fr auto"
       minH="100vh"
     >
       {/* Navbar */}
@@ -21,11 +22,16 @@ const Landing = () => {
       </GridItem>
 
       {/* Main content */}
-      <GridItem area="main">
+      <GridItem area="main" overflow="auto">
         <HomeSection />
         <AboutSection />
         <ServicesSection />
-        <ContactSection />
+        <ContactUsSection />
+      </GridItem>
+
+      {/* Footer */}
+      <GridItem area="footer">
+        <Footer />
       </GridItem>
     </Grid>
   );

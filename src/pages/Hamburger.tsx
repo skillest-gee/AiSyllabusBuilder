@@ -13,7 +13,6 @@ import {
   DrawerBody,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 
 const Hamburger = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,8 +48,7 @@ const Hamburger = () => {
           <DrawerBody>
             <VStack align="start" spacing={4}>
               <Link
-                as={RouterLink}
-                to="/"
+                href="#home"
                 w="100%"
                 color={navLinkColor}
                 onClick={onClose}
@@ -58,8 +56,7 @@ const Hamburger = () => {
                 Home
               </Link>
               <Link
-                as={RouterLink}
-                to="/about"
+                href="#about"
                 w="100%"
                 color={navLinkColor}
                 onClick={onClose}
@@ -67,8 +64,7 @@ const Hamburger = () => {
                 About
               </Link>
               <Link
-                as={RouterLink}
-                to="/services"
+                href="#services"
                 w="100%"
                 color={navLinkColor}
                 onClick={onClose}
@@ -76,8 +72,7 @@ const Hamburger = () => {
                 Services
               </Link>
               <Link
-                as={RouterLink}
-                to="/contact"
+                href="#contact"
                 w="100%"
                 color={navLinkColor}
                 onClick={onClose}
