@@ -1,7 +1,20 @@
-import AppRouter from './routes/appRouter';
+import { Global } from "@emotion/react";
+import AppRouter from "./routes/appRouter";
 
 function App() {
-  return <AppRouter />;
+  return (
+    <>
+      <Global
+        styles={`
+          html {
+            scroll-behavior: smooth,
+            scrollPaddingTop: "100px",
+          }
+        `}
+      />
+      <AppRouter />
+    </>
+  );
 }
 
 export default App;
